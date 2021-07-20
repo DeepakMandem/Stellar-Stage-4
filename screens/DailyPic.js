@@ -17,6 +17,10 @@ export default class DailyPicScreen extends Component {
          })
     }
 
+    componentDidMount(){
+        this.getAPOD()
+    }
+
     render(){
 
         return(
@@ -63,5 +67,37 @@ const Styles = StyleSheet.create({
     ScreenText:{
         flex:1, 
         justifyContent:"center"
+    },
+    container: {
+        flex: 1
+    },
+    droidSafeArea: {
+        marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
+    },
+    backgroundImage: {
+        flex: 1,
+        resizeMode: 'cover',
+    },
+    
+    titleText: {
+        fontSize: 40,
+        fontWeight: "bold",
+        color: "white"
+    },
+    routeText: {
+        fontSize: 35,
+        fontWeight: "bold",
+        color: "black",
+        marginTop: 75,
+        paddingLeft: 30
+    },
+    iconContainer: {
+
+    },
+    listContainer:{
+        
     }
+    
+    
+
 })
